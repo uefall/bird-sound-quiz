@@ -74,3 +74,20 @@ curl -X POST http://localhost:3000/api/session/end \
 
 - 当前会话存储在内存中，重启服务后会丢失。
 - 当前数据来自 mock 池，后续可替换为 eBird / xeno-canto 实时拉取与缓存。
+
+## Cloud 环境配置
+
+仓库已包含 Cursor Cloud Agent 环境配置：
+
+- `.cursor/Dockerfile`：预装 Node.js 与 npm
+- `.cursor/environment.json`：
+  - 使用上述 Dockerfile 构建环境
+  - 启动流程执行 `npm install`
+  - 预置 `npm run dev` 终端
+
+因此后续云端 agent 可直接运行：
+
+```bash
+npm run build
+npm run dev
+```
