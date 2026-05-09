@@ -1,0 +1,15 @@
+{
+  "build": {
+    "dockerfile": ".cursor/Dockerfile",
+    "context": "."
+  },
+  "install": "npm install",
+  "start": "npm install",
+  "terminals": [
+    {
+      "name": "dev-server",
+      "command": "npm run dev",
+      "description": "Run Next.js development server"
+    }
+  ]
+}
