@@ -1,0 +1,36 @@
+{
+  "name": "bird-sound-quiz",
+  "version": "1.0.0",
+  "description": "Bird species and sound challenge web MVP",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uefall/bird-sound-quiz.git"
+  },
+  "keywords": [
+    "bird",
+    "quiz",
+    "nextjs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uefall/bird-sound-quiz/issues"
+  },
+  "homepage": "https://github.com/uefall/bird-sound-quiz#readme",
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "@types/react": "^19.2.14",
+    "typescript": "^6.0.3"
+  }
+}
