@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     responseTimeMs: body.responseTimeMs ?? 0,
   });
 
-  if ("error" in result) {
+  if ("error" in result && result.error) {
     const statusByCode = {
       SESSION_NOT_FOUND: 404,
       QUESTION_NOT_FOUND: 404,
@@ -35,9 +35,10 @@ export async function POST(request: Request) {
       INVALID_ANSWER: 400,
     } as const;
 
+    const errorCode = result.error;
     return NextResponse.json(
-      fail(result.error, result.message ?? "Failed to submit answer"),
-      { status: statusByCode[result.error] },
+      fail(errorCode, result.message ?? "Failed to submit answer"),
+      { status: statusByCode[errorCode] },
     );
   }
 
